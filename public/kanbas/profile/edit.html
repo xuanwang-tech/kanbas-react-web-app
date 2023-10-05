@@ -3,102 +3,246 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Profile Edit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="edit.css">
+    <title>Edit Profile</title>
 </head>
 
 <body>
-    <table border="0" width="80%">
-        <tbody>
-            <tr valign="top">
-                
-                <td>
-                    <ul>
-                        <li><a href="index.html">Account</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="../home.html">Courses</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Commons</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </td>
-
-                <td>
-                    <ul>
-                        <li><a href="#">Notifications</a></li>
-                        <li><a href="index.html">Profile</a></li>
-                        <li><a href="#">Files</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">ePortfolios</a></li>
-                        <li><a href="#">Shared Content</a></li>
-                        <li><a href="#">The Hub</a></li>
-                        <li><a href="#">Qwickly Course Tools</a></li>
-                        <li><a href="#">Global Announcements</a></li>
-                    </ul>
-                </td>
-                <td>
-                    
-                    <h1>Xuan Wang</h1>
-                        <label for="profile-name">Name:* </label>
-                        <input type="text"  value="Xuan Wang">
-                            <label for="profile-pronouns">Pronouns: </label>
-                            <select >
-                                <option value="NONE" selected>None</option>
-                                <option >He/Him/His</option>
-                                <option >She/Her/Hers</option>
-                               
-                            </select>
-                            <br>
-                            <label for="profile-title">Title: </label>
-                            <input type="text" >
-                            <h2>Contact</h2>
-                            No registered services, you can add some on the <a href="#">settings</a> page.
-                            <h2>Contact</h2>
-                            No registered services, you can add some on the <a href="#">settings</a> page.
-                            <h2>Biography</h2>
-                            <textarea cols="50" rows="5">Computer Science Master Student, seeking software development engineer internship.</textarea>
-                            <h2>Links</h2>
+    <div class="d-flex" id="wrapper">
+        <div id="sidebar-wrapper">
+           
+            <div class="d-flex flex-column align-items-center justify-content-center flex-shrink-1 text-white bg-dark m-0"
+                id="profile">
+                <a href="../kanbasnavigation/kanbas.html" class="d-flex align-items-center mb-md-0 text-white text-decoration-none">
+                    <img width="85" height="85" src="../../images/neulogo.jpg"
+                        alt="Northeastern University Logo">
+                </a>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span id="account-icon">
+                                    <i class="fa-regular fa-circle-user fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Account</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../dashboard/dashboard.html" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-gauge-high fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Dashboard</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../course/course.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-book fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Courses</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-regular fa-calendar-days fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Calendar</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-inbox fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Inbox</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-regular fa-clock fa-2x"></i>
+                                </span>
+                                <div class="profile-text">History</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-desktop fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Studio</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Commons</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-regular fa-circle-question fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Help</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid">
+                <span id="account-page-header" class="d-flex flex-row align-items-center">
+                    <h4>
+                        <i class="fa-solid fa-bars fa-1x me-4" id="account-page-header-icon"></i>
+                        Xuan Wang's Profile
+                    </h4>
+                </span>
+                <hr>
+                <div class="d-flex flex-row">
+                    <div>
+                        <div class="d-flex flex-column" id="account-sidebar">
                             <ul>
-                                <li id="external-link"><a href="https://www.linkedin.com/in/xuanww/">Linkedin</a> Links to an
-                                        external site.
-                                </li>
+                                <li><a href="#">Notifications</a></li>
+                                <li class="selected"><a href="index.html">Profile</a></li>
+                                            <li><a href=" #">Files</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">ePortfolios</a></li>
+                                <li><a href="#">Shared Content</a></li>
+                                <li><a href="#">The Hub</a></li>
+                                <li><a href="#">Qwickly Course Tools</a></li>
+                                <li><a href="#">Global Announcements</a></li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column ms-4" id="profile-content">
+                        <form action="index.html" id="profile-form">
+                            <div id="header-container">
+                                <span class="fa-stack fa-3x mb-3 me-auto" id="profile-avatar">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-user fa-stack-1x" aria-hidden="true"></i>
+                                </span>
+                                <div class="float-end">
+                                    <a href="index.html" class="btn btn-primary override-btn">
+                                        <i class="fa-solid fa-pencil"></i>
+                                        Cancel Editing
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-9 mb-3" >
+                                <label for="profile-name" >
+                                    <span class="profile-label">Name:*</span>
+                                </label>
+                                <input type="text" class="form-control" id="profile-name" value="Xuan Wang">
+                            </div>
+                            <div class="col-6 mb-3" >
+                                <label for="profile-pronouns" >
+                                    <span class="profile-label">Pronouns:</span>
+                                </label>
+                                <select name="pronoun" id="profile-pronouns" class="form-select">
+                                    <option value="NONE" selected>None</option>
+                                    <option value="HE-HIM-HIS">He/Him/His</option>
+                                    <option value="SHE-HER-HERS">She/Her/Hers</option>
+                                    <option value="THEY-THEM-THEIRS">They/Them/Theirs</option>
+                                </select>
+                            </div>
+                            <div class="col-9 mb-3 mb-5" >
+                                <label  >
+                                    <span class="profile-label">Title:</span>
+                                </label>
+                                <input type="text" class="form-control" >
+                            </div>
+                            <div class="mb-4 profile-section" >
+                                <h3>Contact</h2>
+                                    No registered services, you can add some on the <a href="#"
+                                        id="settings-link">settings</a> page.
+                            </div>
+                            <div class="col-9 mb-4" >
+                                <label >
+                                    <h3>Biography</h3>
+                                </label>
+                                <textarea name="biography"  cols="30" rows="10"
+                                    class="form-control">Computer Science Master Student, seeking software development engineer internship.
+                                            </textarea>
+                            </div>
+                            <div class="mb-4 profile-section" >
+                                <h3>Links</h3>
+                                <div class="row mb-1 align-items-center">
+                                    <div class="d-flex col-5 justify-content-center">
+                                        <span class="profile-label">Title</span>
+                                    </div>
+                                    <div class="col-1">
 
-                            <table border="0" width="80%" id="links-table">
-                                <thead>
-                                    <tr>
-                                        <th> Title</th>
-                                        <th> URL </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="auto-width"><input type="text" value="Linkedin">
-                                        </td>
-                                        <td>&rarr;</td>
-                                        <td class="auto-width"><input type="text" 
-                                                value="https://www.linkedin.com/in/xuanww/"></td>
-                                        <td><a href="#">Remove</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <button type="button">Add another link</button>
-                            <br>
-                            <button type="button">Cancel</button>
-                            <button>Save Profile</button>
-                            <br>
-                            <button type="button">Edit Profile</button>
-                            <button>Cancel Editing</button>
+                                    </div>
+                                    <div class="d-flex col-5 justify-content-center">
+                                        <span class="profile-label">URL</span>
+                                    </div>
+                                    <div class="col-1">
+
+                                    </div>
+                                </div>
+                                <div class="row mb-1 align-items-center">
+                                    <div class="col-5">
+                                        <input type="text" class="form-control" value="Linkedin">
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="text" class="form-control"
+                                            value="https://www.linkedin.com/in/xuanww/">
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mb-4">
+                                    <div class="col-5">
+                                        <a href="#" class="btn btn-primary override-btn" id="button-add-link">Add
+                                            another link</a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="d-flex flex-row justify-content-end">
+                                <a href="./index.html" class="btn btn-primary override-btn me-3">Cancel</a>
+                                <button class="btn btn-primary btn-red">Save Profile</button>
+                            </div>
                         </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"></script>
+    <script src="https://kit.fontawesome.com/d86fba7c7b.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
-
-
-
-

@@ -1,0 +1,161 @@
+#dashboard {
+    width: 85px !important;
+    min-height: max(100vh, 100%);
+}
+
+#dashboard ul {
+    max-width: 100% !important;
+}
+
+#dashboard ul li {
+    max-width: 100% !important;
+}
+
+.dashboard-text {
+    font-size: 0.9em !important;
+}
+
+.nav-link,
+nav-link:visited {
+    color: #ffffff;
+    max-width: 100% !important;
+}
+
+.nav-link:hover {
+    color: #E50000;
+}
+
+.nav-pills .nav-link span {
+    color: #E50000;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #ffffff;
+    color: #E50000;
+}
+
+#header h2 {
+    font-weight: 200;
+}
+
+#page h4 {
+    font-weight: 400;
+}
+
+#account-icon {
+    color: grey;
+}
+
+.nav-pills .nav-link {
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.nav-pills .nav-link div span,
+.nav-pills .nav-link div div {
+    margin-block: 3px;
+}
+
+.page-content-wrapper {
+    margin: 25px;
+}
+
+.override-btn {
+    background-color: rgb(233, 233, 233);
+    border: 1px solid rgb(196, 195, 195);
+    color: black;
+}
+
+.btn-primary.override-btn:active {
+    background-color: grey;
+    border: 1px solid grey;
+    color: black;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tables-body .tables-title {
+    color: #E50000;
+    font-size: 0.9em;
+}
+
+.tables-text {
+    color: #62b924;
+}
+
+.tables-body .subtitle {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.tables-body p {
+    font-size: 0.7em;
+    color: rgb(128, 128, 128);
+}
+
+.tables-icon i {
+    color: grey;
+}
+
+.tables-icon i:hover {
+    color: #E50000;
+}
+#tables {
+    max-width: 1100px;
+    margin-right: 50px;
+    column-gap: 20px;
+}
+
+.override-btn:hover {
+    background-color: lightgrey;
+    color: black;
+    border: 1px solid lightgrey;
+}
+
+.course-solid-color {
+    background-color: #24b980;
+    min-height: 125px;
+}
+
+.col {
+    width: 250px;
+    height: 250px;
+    margin-block: 30px;
+}
+
+.tables {
+    width: 100%;
+}
+
+.table-top {
+    position: relative;
+}
+
+.tables-button {
+    color: white;
+}
+
+.tables-button:hover {
+    color: white;
+    text-shadow: 0 0 5px lightgrey;
+}
+
+.tables-body a {
+    text-decoration: none;
+    color: #E50000;
+}
+
+.tables-body a:hover {
+    text-decoration: underline;
+    text-decoration-color: #E50000;
+}
+
+.tables-body .tables-container {
+    color: #E50000;
+}
+

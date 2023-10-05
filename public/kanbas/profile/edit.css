@@ -1,0 +1,164 @@
+#profile {
+    width: 85px !important;
+    min-height: max(100vh, 100%);
+}
+
+#profile ul {
+    max-width: 100% !important;
+}
+
+#profile ul li {
+    max-width: 100% !important;
+}
+
+.profile-text {
+    font-size: 0.9em !important;
+}
+
+.nav-link,
+.nav-link:visited {
+    color: #ffffff;
+    max-width: 100% !important;
+}
+
+.nav-link:hover {
+    color: #E50000;
+}
+
+.nav-pills .nav-link span {
+    color: #E50000;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #ffffff;
+    color: #E50000;
+}
+
+#account-icon {
+    color: grey;
+}
+
+.nav-pills .nav-link {
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.nav-pills .nav-link div span,
+.nav-pills .nav-link div div {
+    margin-block: 3px;
+}
+
+.page-content-wrapper {
+    margin: 25px;
+}
+
+#account-page-header-icon {
+    color: #E50000;
+}
+
+#account-sidebar {
+    max-width: 190px;
+
+}
+
+#account-sidebar ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+#account-sidebar li {
+    list-style-type: none;
+    padding-block: 10px;
+    
+}
+
+#account-sidebar li a {
+    text-decoration: none;
+    color: #E50000;
+    font-size: 1.2em;
+}
+
+#account-sidebar li.selected {
+    padding-left: 8px;
+    margin-left: -10px;
+    border-left: 2px solid black;
+}
+
+#account-sidebar li.selected a {
+    color: black;
+    font-weight: 500;
+}
+
+.fa-circle {
+    color: lightgrey;
+}
+
+#username {
+    font-weight: 400;
+}
+
+#settings-link {
+    text-decoration: none;
+    color: #E50000;
+}
+
+.fa-link {
+    color: grey;
+}
+
+#links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.override-btn {
+    background-color: rgb(233, 233, 233);
+    border: 1px solid rgb(196, 195, 195);
+    color: black;
+}
+
+.btn-primary.override-btn:active {
+    background-color: grey;
+    border: 1px solid grey;
+    color: black;
+}
+
+.override-btn:hover {
+    background-color: lightgrey;
+    color: black;
+    border: 1px solid lightgrey;
+}
+
+.btn-red {
+    color: white;
+    background-color: #E50000;
+    border: 1px solid rgb(196, 195, 195);
+}
+
+.btn-primary.btn-red:active {
+    background-color: #a00000;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: #b90000;
+    color: white;
+    border: 1px solid white;
+}
+
+
+
+.profile-label {
+    font-weight: 600;
+}
+
+.fa-xmark {
+    color: #E50000;
+}
+
+#button-add-link {
+    font-size: 0.9em;
+    padding-block: 0;
+}

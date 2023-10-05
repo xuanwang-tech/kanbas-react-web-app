@@ -4,65 +4,190 @@
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
+    <link href="edit.css" rel="stylesheet" />
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+   
+    
 </head>
 
 <body>
-    <table border="0" width="100%">
-        <tbody>
-            <tr valign="top">
-                
-                <td>
-                    <ul>
-                        <li><a href="index.html">Account</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="../home.html">Courses</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Commons</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </td>
-                
-                <td>
-                    <ul>
-                        <li><a href="#">Notifications</a></li>
-                        <li><a href="index.html">Profile</a></li>
-                        <li><a href="#">Files</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">ePortfolios</a></li>
-                        <li><a href="#">Shared Content</a></li>
-                        <li><a href="#">The Hub</a></li>
-                        <li><a href="#">Qwickly Course Tools</a></li>
-                        <li><a href="#">Global Announcements</a></li>
-                    </ul>
-                </td>
-                
-                <td>
-                    <div id="profile-header">
+    <div class="d-flex flex-row" id="wrapper">
+        <div id="sidebar-wrapper">
+            
+            <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1 text-white bg-dark m-0"
+                id="profile">
+                <a href="../kanbasnavigation/kanbas.html" class="d-flex align-items-center mb-md-0 text-white text-decoration-none">
+                    <img width="85" height="85" src="../../images/neulogo.jpg"
+                        alt="Northeastern University Logo">
+                </a>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span id="account-icon">
+                                    <i class="fa-regular fa-circle-user fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Account</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../dashboard/dashboard.html" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-gauge-high fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Dashboard</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../course/course.html" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-book fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Courses</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-regular fa-calendar-days fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Calendar</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-inbox fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Inbox</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-regular fa-clock fa-2x"></i>
+                                </span>
+                                <div class="profile-text">History</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-desktop fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Studio</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Commons</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-regular fa-circle-question fa-2x"></i>
+                                </span>
+                                <div class="profile-text">Help</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid">
+                <span id="account-page-header" class="d-flex flex-row align-items-center">
+                    <h4>
+                        <i class="fa-solid fa-bars fa-1x me-4" id="account-page-header-icon"></i>
                         Xuan Wang's Profile
+                    </h4>
+                </span>
+                <hr>
+                <div class="d-flex flex-row">
+                    <div>
+                        <div class="d-flex flex-column" id="account-sidebar">
+                            <ul>
+                                <li><a href="#">Notifications</a></li>
+                                <li class="selected"><a href="index.html">Profile</a></li>
+                                <li><a href=" #">Files</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">ePortfolios</a></li>
+                                <li><a href="#">Shared Content</a></li>
+                                <li><a href="#">The Hub</a></li>
+                                <li><a href="#">Qwickly Course Tools</a></li>
+                                <li><a href="#">Global Announcements</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <hr>
-                    <a href="edit.html" style="float: right;"><button>Edit Profile</button></a>
-                 
-                        <h1>Xuan Wang</h1>
-                    
-                        <h2>Contact</h2>
-                            No registered services, you can add some on the <a href="#">settings</a> page.
-                      
-                        <h2>Biography</h2>
+                    <div class="d-flex flex-column ms-4" id="profile-content">
+                        <div id="header-container">
+                            <div class="me-auto">
+                                <span class="fa-stack fa-3x mb-3" id="profile-avatar">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-user fa-stack-1x" aria-hidden="true"></i>
+                                </span>
+                                <div class="float-end">
+                                    <a href="edit.html" class="btn btn-primary override-btn">
+                                        <i class="fa-solid fa-pencil"></i>
+                                        Edit Profile
+                                    </a>
+                                </div>
+                                <h2 class="mb-5" id="username">Xuan Wang</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-4 ">
+                            <h3>Contact</h2>
+                                No registered services, you can add some on the <a href="#">settings</a> page.
+                        </div>
+                        <div class="mb-4 ">
+                            <h3>Biography</h3>
                             Computer Science Master Student, seeking software development engineer internship.
-                      
-                        <h2>Links</h2>
-                            <a href="https://www.linkedin.com/in/xuanww/">Lindedin</a>
-                        
-                    </form>
+                        </div>
+                        <div class="mb-4 ">
+                            <h3>Links</h3>
+                            <ul id="links-list">
+                                <li>
+                                    <a href="https://www.linkedin.com/in/xuanww/">
+                                        <i class="fa-solid fa-link"></i>
+                                        Linkedin
+                                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                </td>
-            </tr>
-        </tbody>
-    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"></script>
+    <script src="https://kit.fontawesome.com/d86fba7c7b.js" crossorigin="anonymous"></script>
 </body>
-
 </html>

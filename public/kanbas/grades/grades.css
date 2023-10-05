@@ -1,0 +1,129 @@
+#grades {
+    width: 85px !important;
+    min-height: max(100vh, 100%);
+}
+
+#grades ul {
+    max-width: 100% !important;
+}
+
+#grades ul li {
+    max-width: 100% !important;
+}
+
+.grades-text {
+    font-size: 0.9em !important;
+}
+
+.nav-link,
+.nav-link:visited {
+    color: #ffffff;
+    max-width: 100% !important;
+}
+
+.nav-link:hover {
+    color: #E50000;
+}
+
+.nav-pills .nav-link span {
+    color: #E50000;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #ffffff;
+    color: #E50000;
+}
+
+#account-icon {
+    color: grey;
+}
+
+.nav-pills .nav-link {
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.nav-pills .nav-link div span,
+.nav-pills .nav-link div div {
+    margin-block: 3px;
+}
+
+.page-content-wrapper {
+    margin: 25px;
+}
+
+#assignments-page-header-icon {
+    color: #E50000;
+}
+
+.breadcrumb-item a {
+    color: #E50000;
+    text-decoration: none;
+}
+
+#grades-sidebar {
+    max-width: 190px;
+}
+
+#assignments-sidebar-title {
+    font-style: italic;
+    color: rgb(93, 93, 93);
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#grades-sidebar ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+#grades-sidebar li {
+    list-style-type: none;
+    padding-block: 10px;
+    /* margin-block: 20px; */
+}
+
+#grades-sidebar li a {
+    text-decoration: none;
+    color: #E50000;
+    font-size: 1.2em;
+}
+
+#grades-sidebar li.selected {
+    padding-left: 8px;
+    margin-left: -10px;
+    border-left: 2px solid black;
+}
+
+#grades-sidebar li.selected a {
+    color: black;
+    font-weight: 500;
+}
+
+
+
+.link-no-decoration {
+    text-decoration: none;
+    color: black;
+}
+
+.link-red {
+    color: #E50000;
+}
+
+.column-subtitle {
+    font-size: 0.9em;
+}
+
+td {
+    text-align: center;
+}
+
+.focus-red:focus {
+    border-color: #E50000;
+}

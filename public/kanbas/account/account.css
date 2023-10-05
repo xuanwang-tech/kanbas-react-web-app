@@ -1,0 +1,86 @@
+#kanbas {
+    width: 85px !important;
+    min-height: max(100vh, 100%);
+}
+
+#kanbas ul {
+    max-width: 100% !important;
+}
+
+#kanbas ul li {
+    max-width: 100% !important;
+}
+
+.kanbas-text {
+    font-size: 0.9em !important;
+}
+
+.nav-link {
+    color: #ffffff;
+    max-width: 100% !important;
+}
+
+.nav-pills .nav-link span {
+    color: #E50000;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #ffffff;
+    color: #E50000;
+}
+
+#account-icon {
+    color: grey;
+}
+
+.nav-pills .nav-link {
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.nav-pills .nav-link div span,
+.nav-pills .nav-link div div {
+    margin-block: 3px;
+}
+
+.page-content-wrapper {
+    margin: 25px;
+}
+
+#account-page-header-icon {
+    color: #E50000;
+}
+
+#account-sidebar {
+    max-width: 190px;
+
+}
+
+#account-sidebar ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+#account-sidebar li {
+    list-style-type: none;
+    padding-block: 10px;
+    /* margin-block: 20px; */
+}
+
+#account-sidebar li a {
+    text-decoration: none;
+    color: #E50000;
+    font-size: 1.2em;
+}
+
+#account-sidebar li.selected {
+    padding-left: 8px;
+    margin-left: -10px;
+    border-left: 2px solid black;
+}
+
+#account-sidebar li.selected a {
+    color: black;
+    font-weight: 500;
+}

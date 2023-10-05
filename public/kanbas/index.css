@@ -1,0 +1,148 @@
+.main-container {
+    height: 100vh;
+}
+
+.col-md-2.kanbas-nav-bar {
+    width: 85px;
+    padding: 0;
+    margin-left: 10px;
+    background: #000;
+}
+
+.nu-logo {
+    background-color: black;
+    padding: 0;
+}
+.nu-logo img {
+    width: -webkit-fill-available;
+}
+
+.kanbas-nav-bar .list-group {
+    border-radius: 0;
+}
+
+.kanbas-nav-bar .list-group-item{
+    z-index: 2;
+    color: #fff;
+    background-color: #000;
+    border: none; 
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vh;
+}
+
+.kanbas-nav-bar .list-group-item.active{
+    color: #d41b2c;
+    background-color: #fff;
+}
+
+.kanbas-nav-bar .list-group-item .icon {
+    font-size: 1.5rem;
+    color: #d41b2c;
+}
+
+.kanbas-nav-bar .list-group-item.active .icon{
+    color: lightgray;
+}
+
+.col.profile-container {
+    padding: 1.5rem;
+}
+.profile-header-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-sec-container {
+    margin-left: 0;
+    display: flex;
+}
+
+.profle-nav-bar .list-group {
+    border-radius: 0;
+    width: 200px;
+}
+
+.profle-nav-bar .list-group-item{
+    color: #d41b2c;
+    background-color: #fff;
+    border: none; 
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profle-nav-bar .list-group-item.active{
+    color: #000;
+    border-left: 2px solid #000;
+    background-color: #fff;
+}
+
+.profle-nav-bar .list-group-item-action:focus, .profle-nav-bar .list-group-item-action:hover {
+    z-index: 1;
+    color: #d41b2c;
+    text-decoration: underline;
+    background-color: #fff;
+}
+
+.profile-sec-container .content-section {
+    margin: 0 2rem;
+    width: -webkit-fill-available;
+}
+
+.profile-img-container {
+    margin: 3vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-form-container {
+    width: 60%;
+}
+
+.btn.edit-profile-btn {
+    height: fit-content;
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid #c7cdd1;
+}
+
+.btn.edit-profile-btn:hover {
+    color: #2d3b45;
+    background-color: #e8e8e8;
+}
+
+.btn.save-profile-btn {
+    height: fit-content;
+    background: #d41b2c;
+    color: #fff;
+    border: 1px solid #c7cdd1;
+}
+
+.btn.save-profile-btn:hover {
+    color: #fff;
+    background-color: #fc1616;
+}
+
+.margin-2vh {
+    margin: 2vh 0;
+}
+
+.link-collector {
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-action-btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-action-btn-container a {
+    margin-left: 1rem;
+}

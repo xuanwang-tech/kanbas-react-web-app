@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <div id="sidebar-wrapper">
+            
+            <div class="d-flex flex-column align-items-center justify-content-center flex-shrink-1 text-white bg-dark m-0"
+                id="dashboard">
+                <a href="../kanbasnavigation/kanbas.html" class="d-flex align-items-center mb-md-0 text-white text-decoration-none">
+                    <img width="85" height="85" src="../../images/neulogo.jpg"
+                        alt="Northeastern University Logo">
+                </a>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="../profile/index.html" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span id="account-icon">
+                                    <i class="fa-regular fa-circle-user fa-2x"></i>
+                                </span>
+                                <div class="dashboard-text">Account</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link active">
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-gauge-high fa-2x"></i>
+                                </span>
+                                <div class="dashboard-text">Dashboard</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../course/course.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-book fa-2x"></i>
+                                </span>
+                                <div class="dashboard-text">Courses</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-regular fa-calendar-days fa-2x"></i>
+                                </span>
+                                <div class="dashboard-text">Calendar</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-inbox fa-2x"></i>
+                                </span>
+                                <div class="dashboard-text">Inbox</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-regular fa-clock fa-2x"></i>
+                                </span>
+                                <div class="dashboard-text">History</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-desktop fa-2x"></i>
+                                </span>
+                                <div class="dashboard-text">Studio</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                                </span>
+                                <div class="dashboard-text">Commons</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >
+                            <div class="d-flex flex-column align-items-center">
+                                <span>
+                                    <i class="fa-regular fa-circle-question fa-2x"></i>
+                                </span>
+                                <div class="dashboard-text">Help</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+        <div class="page-content-wrapper container-fluid">
+            <span id="header">
+                <h2>
+                    Dashboard
+                </h2>
+            </span>
+            <hr />
+            <div class="container-fluid">
+                <span id="page">
+                    <h4>
+                        Published Courses (7)
+                    </h4>
+                </span>
+                <hr>
+                <div class="d-flex flex-row flex-wrap row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-start"
+                    id="tables">
+                    <div class="col">
+                        <div class="tables shadow-sm">
+                            <div class="table-top course-solid-color d-flex flex-row">
+                                <img src="" alt="">
+                                <button type="button"
+                                    class="btn position-absolute top-0 end-0 right-0 m-2 tables-button">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div class="tables-body d-flex flex-column">
+                                <a href="#" class="mb-2 card-link">
+                                    <div >
+                                        <h6 class="tables-title ellipsis">
+                                            <span class="tables-text">
+                                                CS 5610 17387 Web Development
+                                            </span>
+                                        </h6>
+                                        <h5 class="subtitle mb-2 text-muted">CS4550.12631.202410</h5>
+                                        <p class="tables-text ellipsis">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="tables-icon">
+                                    <i class="fa-regular fa-note-sticky"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="tables shadow-sm">
+                            <div class="table-top course-solid-color d-flex flex-row">
+                                <img src="" alt="">
+                                <button type="button"
+                                    class="btn position-absolute top-0 end-0 right-0 m-2 tables-button">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div class="tables-body d-flex flex-column">
+                                <a href="#" class="mb-2 card-link">
+                                    <div class="tables-container">
+                                        <h6 class="tables-title ellipsis">
+                                            <span class="tables-text">
+                                                CS 5610 17387 Web Development
+                                            </span>
+                                        </h6>
+                                        <h5 class="subtitle mb-2 text-muted">CS4550.12631.202410</h5>
+                                        <p class="tables-text ellipsis">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="tables-icon">
+                                    <i class="fa-regular fa-note-sticky"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="tables shadow-sm">
+                            <div class="table-top course-solid-color d-flex flex-row">
+                                <img src="" alt="">
+                                <button type="button"
+                                    class="btn position-absolute top-0 end-0 right-0 m-2 tables-button">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div class="tables-body d-flex flex-column">
+                                <a href="#" class="mb-2 card-link">
+                                    <div class="tables-container">
+                                        <h6 class="tables-title ellipsis">
+                                            <span class="tables-text">
+                                                CS 5610 17387 Web Development
+                                            </span>
+                                        </h6>
+                                        <h5 class="subtitle mb-2 text-muted">CS4550.12631.202410</h5>
+                                        <p class="tables-text ellipsis">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="tables-icon">
+                                    <i class="fa-regular fa-note-sticky"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="tables shadow-sm">
+                            <div class="table-top course-solid-color d-flex flex-row">
+                                <img src="" alt="">
+                                <button type="button"
+                                    class="btn position-absolute top-0 end-0 right-0 m-2 tables-button">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div class="tables-body d-flex flex-column">
+                                <a href="#" class="mb-2 card-link">
+                                    <div class="tables-container">
+                                        <h6 class="tables-title ellipsis">
+                                            <span class="tables-text">
+                                                CS 5610 17387 Web Development
+                                            </span>
+                                        </h6>
+                                        <h5 class="subtitle mb-2 text-muted">CS4550.12631.202410</h5>
+                                        <p class="tables-text ellipsis">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="tables-icon">
+                                    <i class="fa-regular fa-note-sticky"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="tables shadow-sm">
+                            <div class="table-top course-solid-color d-flex flex-row">
+                                <img src="" alt="">
+                                <button type="button"
+                                    class="btn position-absolute top-0 end-0 right-0 m-2 tables-button">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div class="tables-body d-flex flex-column">
+                                <a href="#" class="mb-2 card-link">
+                                    <div class="tables-container">
+                                        <h6 class="tables-title ellipsis">
+                                            <span class="tables-text">
+                                                CS 5610 17387 Web Development
+                                            </span>
+                                        </h6>
+                                        <h5 class="subtitle mb-2 text-muted">CS4550.12631.202410</h5>
+                                        <p class="tables-text ellipsis">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="tables-icon">
+                                    <i class="fa-regular fa-note-sticky"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="tables shadow-sm">
+                            <div class="table-top course-solid-color d-flex flex-row">
+                                <img src="" alt="">
+                                <button type="button"
+                                    class="btn position-absolute top-0 end-0 right-0 m-2 tables-button">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div class="tables-body d-flex flex-column">
+                                <a href="#" class="mb-2 card-link">
+                                    <div class="tables-container">
+                                        <h6 class="tables-title ellipsis">
+                                            <span class="tables-text">
+                                                CS 5610 17387 Development
+                                            </span>
+                                        </h6>
+                                        <h5 class="subtitle mb-2 text-muted">CS4550.12631.202410</h5>
+                                        <p class="tables-text ellipsis">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="tables-icon">
+                                    <i class="fa-regular fa-note-sticky"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="tables shadow-sm">
+                            <div class="table-top course-solid-color d-flex flex-row">
+                                <img src="" alt="">
+                                <button type="button"
+                                    class="btn position-absolute top-0 end-0 right-0 m-2 tables-button">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div class="tables-body d-flex flex-column">
+                                <a href="#" class="mb-2 card-link">
+                                    <div class="tables-container">
+                                        <h6 class="tables-title ellipsis">
+                                            <span class="tables-text">
+                                                CS 5610 17387 Web Development
+                                            </span>
+                                        </h6>
+                                        <h5 class="subtitle mb-2 text-muted">CS4550.12631.202410</h5>
+                                        <p class="tables-text ellipsis">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="tables-icon">
+                                    <i class="fa-regular fa-note-sticky"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"></script>
+    <script src="https://kit.fontawesome.com/d86fba7c7b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

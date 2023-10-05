@@ -1,0 +1,230 @@
+#assignments {
+    width: 85px !important;
+    min-height: max(100vh, 100%);
+}
+
+#assignments ul {
+    max-width: 100% !important;
+}
+
+#assignments ul li {
+    max-width: 100% !important;
+}
+
+.assignments-text {
+    font-size: 0.9em !important;
+}
+
+.nav-link,
+.nav-link:visited {
+    color: #ffffff;
+    max-width: 100% !important;
+}
+
+.nav-link:hover {
+    color: #E50000;
+}
+
+.nav-pills .nav-link span {
+    color: #E50000;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #ffffff;
+    color: #E50000;
+}
+
+#account-icon {
+    color: grey;
+}
+
+.nav-pills .nav-link {
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.nav-pills .nav-link div span,
+.nav-pills .nav-link div div {
+    margin-block: 3px;
+}
+
+.page-content-wrapper {
+    margin: 25px;
+}
+
+#assignments-page-header-icon {
+    color: #E50000;
+}
+
+.breadcrumb-item a {
+    color: #E50000;
+    text-decoration: none;
+}
+
+.secondary-sidebar {
+    max-width: 190px;
+}
+
+.secondary-sidebar-title {
+    font-style: italic;
+    color: rgb(93, 93, 93);
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.secondary-sidebar ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+.secondary-sidebar li {
+    list-style-type: none;
+    padding-block: 10px;
+    /* margin-block: 20px; */
+}
+
+.secondary-sidebar li a {
+    text-decoration: none;
+    color: #E50000;
+    font-size: 1.2em;
+}
+
+.secondary-sidebar li.selected {
+    padding-left: 8px;
+    margin-left: -10px;
+    border-left: 2px solid black;
+}
+
+.secondary-sidebar li.selected a {
+    color: black;
+    font-weight: 500;
+}
+
+.fa-check-circle {
+    color: green;
+}
+
+#links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.override-btn {
+    background-color: rgb(233, 233, 233);
+    border: 1px solid rgb(196, 195, 195);
+    color: black;
+}
+
+.btn-primary.override-btn:active {
+    background-color: grey;
+    border: 1px solid grey;
+    color: black;
+}
+
+.override-btn:hover {
+    background-color: lightgrey;
+    color: black;
+    border: 1px solid lightgrey;
+}
+
+.btn-red {
+    color: white;
+    background-color: #E50000;
+    border: 1px solid rgb(196, 195, 195);
+}
+
+.btn-primary.btn-red:active {
+    background-color: #a00000;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: #b90000;
+    color: white;
+    border: 1px solid white;
+}
+
+.link-no-decoration {
+    text-decoration: none;
+    color: black;
+}
+
+.assignment-module a:hover {
+    text-decoration: underline;
+}
+
+.module-title .two-ellipsis {
+    padding-left: 2px;
+}
+
+.finished {
+    border-radius: 0;
+    border-left: 3px solid;
+    border-left-color: green;
+}
+
+.assignment-module .module-slide-link {
+    color: #E50000;
+}
+
+.fa-link {
+    color: green;
+    font-size: 0.8em;
+}
+
+.btn-50-width {
+    width: 50%;
+}
+
+.check-white {
+    color: white;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.numbered-notification-badger {
+    color: #E50000;
+}
+
+.link-red {
+    text-decoration: none;
+    color: #E50000;
+}
+
+.to-do-item-title:hover {
+    text-decoration: underline;
+}
+
+.right-sidebar-detail {
+    font-size: 0.8em;
+}
+
+.link-small {
+    font-size: 0.8em;
+}
+
+.assignment-item-icon {
+    color: green;
+}
+
+.assignment-item-title {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.assignment-item-detail,
+.assignment-item-due-date {
+    font-size: 0.9em;
+}
+
+.border-dotted {
+    border-style: dashed !important;
+}
