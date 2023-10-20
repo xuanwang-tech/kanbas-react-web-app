@@ -1,0 +1,36 @@
+.wd-module-list-item {
+    background-color: rgb(243, 243, 243) !important;
+    border-color: lightgrey !important;
+}
+
+.module-list {
+    padding-right: 1em;
+}
+
+.module-list .list-group-item .icon{
+    margin: 0 8px;
+}
+
+.module-list .list-group-item {
+    border-left: 4px solid rgb(3, 175, 3);
+    border-radius: 0 !important;
+}
+
+.module-list .list-group-item.list-group-item-secondary {
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.modules-action-container {
+/*    
+    display: flex; */
+    justify-content: flex-end;
+}
+
+.modules-action-container > * {
+    flex-shrink: 0;  /* Prevents flex items from shrinking */
+}
+.modules-action-container .btn {
+    padding: 0.5em 1em;  /* Adjust these values as required */
+}
+

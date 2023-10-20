@@ -1,0 +1,79 @@
+.wd-assignments-section-title {
+    background-color: rgb(242, 242, 242);
+    margin-bottom: 0 !important;
+    padding: 15px 10px !important;
+}
+
+.wd-assignment-list-item {
+    border-radius: 0 !important;
+    border-left: 4px solid green !important;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.assignment-stat {
+    border: 1px solid #2d3b45;
+    padding: 0 12px;
+}
+
+.center-align {    
+    display: flex;
+    align-items: center;
+}
+
+.list-group-item.assignment-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.assignment-edit-form .submission-container{
+    border: 1px solid #c7cdd1;
+    border-radius: 6px;
+}
+
+.assignment-edit-form .submission-container .chip {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e8e8e8;
+    color: #000;
+    width: 30%;
+}
+
+.assignment-edit-form .calendar-container {
+    border: 1px solid #c7cdd1;
+    display: flex;
+    justify-content: space-between;
+}
+.assignment-edit-form .calendar-container .cal-icon {
+    background-color: #e8e8e8;
+    color: #000;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+}
+
+.assignment-edit-form .assign-container{
+    border: 1px solid #c7cdd1;
+    border-radius: 6px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.assignment-edit-form .assign-footer {
+    background-color: #e8e8e8;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.edit-assign-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

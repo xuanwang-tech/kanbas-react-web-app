@@ -1,0 +1,14 @@
+.table .table-data-align {
+    text-align: center;
+}
+
+.table .table-data-align th{
+    text-align: center;
+    font-weight: 400;
+}
+
+.table.grades-table tbody tr th {
+    text-align: initial;
+    color: #d41b2c;
+    font-weight: 400;
+}
