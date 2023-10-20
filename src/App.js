@@ -1,6 +1,6 @@
 import './index.css';
 import Labs from "./Labs";
-
+import './App.css';
 import HelloWorld from "./Labs/a3/HelloWorld";
 import Kanbas from "./Kanbas";
 import {HashRouter} from "react-router-dom";
