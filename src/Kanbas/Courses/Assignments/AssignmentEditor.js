@@ -45,16 +45,10 @@ function AssignmentEditor() {
  
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const assignment = useSelector(state => 
-    state.assignmentsReducer.assignments.find(a => a._id === assignmentId)
-  ) || {
-    title: "New Assignment",
-    description: "New Assignment Description",
-    points: 100,
-    due: "",
-    available: "",
-    until: "",
-  };
+
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+ 
 
    const [editedAssignment, setEditedAssignment] = useState(assignment);
 
@@ -68,14 +62,17 @@ function AssignmentEditor() {
   };
 
   const handleSave = () => {
-    
-    if (!assignmentId || assignmentId === 'new') {
-      dispatch(updateAssignment({ ...editedAssignment, _id: undefined })); 
+    const existingAssignment = assignments.find((assignment) => assignment._id === assignmentId);
+    if (existingAssignment) {
+      dispatch(updateAssignment(assignment));
     } else {
-      dispatch(updateAssignment(editedAssignment));
+      dispatch(addAssignment({
+        ...assignment, course: courseId
+      }));
     }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+
   const handleCancel = () => {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
@@ -86,14 +83,18 @@ return (
     <h2>Edit Assignment</h2>
     <form>
       <div className="form-group">
-        <label>Title</label>
+        <label>Assignment Name</label>
         <input
           type="text"
           className="form-control"
           id="assignmentTitle"
           name="title"
           value={editedAssignment.title}
-          onChange={handleInputChange}
+          onChange={(e) =>
+            dispatch(
+              setAssignment({ ...assignment, title: e.target.value })
+            )
+          }
         />
       </div>
       <div className="form-group">
@@ -104,7 +105,14 @@ return (
           name="description"
           rows="3"
           value={editedAssignment.description}
-          onChange={handleInputChange}
+          onChange={(e) =>
+            dispatch(
+              setAssignment({
+                ...assignment,
+                description: e.target.value,
+              })
+            )
+          }
         ></textarea>
       </div>
       <div className="form-group">
@@ -112,10 +120,14 @@ return (
         <input
           type="text"
           className="form-control"
-          id="assignmentTitle"
+          id="assignmenPoints"
           name="points"
           value={editedAssignment.points}
-          onChange={handleInputChange}
+          onChange={(e) =>
+            dispatch(
+              setAssignment({ ...assignment, points: e.target.value })
+            )
+          }
         />
       </div>
       <div className="form-group">
@@ -126,7 +138,14 @@ return (
           id="assignmentDueDate"
           name="dueDate"
           value={editedAssignment.dueDate}
-          onChange={handleInputChange}
+          onChange={(e) =>
+            dispatch(
+              setAssignment({
+                ...assignment,
+                due: e.target.value,
+              })
+            )
+          }
         />
       </div>
       <div className="form-group">
@@ -137,7 +156,14 @@ return (
           id="assignmentAvailableFromDate"
           name="availableFromDate"
           value={editedAssignment.availableFromDate}
-          onChange={handleInputChange}
+          onChange={(e) =>
+            dispatch(
+              setAssignment({
+                ...assignment,
+                available: e.target.value,
+              })
+            )
+          }
         />
       </div>
       <div className="form-group">
@@ -148,12 +174,20 @@ return (
           id="assignmentAvailableUntilDate"
           name="availableUntilDate"
           value={editedAssignment.availableUntilDate}
-          onChange={handleInputChange}
+          onChange={(e) =>
+            dispatch(
+              setAssignment({
+                ...assignment,
+                until: e.target.value,
+              })
+            )
+          }
         />
       </div>
       <div className="form-group text-right mt-3">
         <button type="button" className="btn btn-secondary mr-2" onClick={handleCancel}>Cancel</button>
         <button type="button" className="btn btn-primary" onClick={handleSave}>Save</button>
+       
       </div>
     </form>
   </div>
