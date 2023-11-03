@@ -4,6 +4,7 @@ import "./index.css";
 import { React, useState } from "react";
 import { FaEllipsisV } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaEllipsisVertical, FaRegPenToSquare } from "react-icons/fa6";
 
 function Dashboard() {
 
@@ -78,7 +79,7 @@ function Dashboard() {
 
 //     </div>
 // );
-const [showForm, setShowForm] = useState(false);
+
   const [course, setCourse] = useState({
     name: "New Course",
     number: "New Number",
@@ -87,12 +88,10 @@ const [showForm, setShowForm] = useState(false);
     background: "rgb(96, 228, 228)"
   })
 
-  const toggleForm = () => {
-    setShowForm(!showForm);
-  }
+
   const addCourse = () => {
     setCourses([...courses, { ...course, _id: new Date().getTime() }])
-    setShowForm(false);
+    
   }
 
   const deleteCourse = (courseId) => {
@@ -109,93 +108,104 @@ const [showForm, setShowForm] = useState(false);
         }
       })
     );
-    setShowForm(false);
+    
   };
 
-  return (
-    <div className="main-container">
-      <div className="page-title">
-        Dashboard
-        <Link to={`/Labs`}>
-          <button type="button" className="btn btn-danger float-end ms-2">Labs</button>
-        </Link>
-      </div>
+
+return (
+    <div className="ms-3">
+      <h1>Dashboard</h1>
       <hr />
-      <div className="courses-container">
-        <div className="published-courses">Published Courses ({courses.length})</div>
-        <hr />
-        <button type="button" className="btn btn-danger custom-btn ms-2"
-          onClick={() => {
-            toggleForm();
-          }}>
-          Add New Course
+      <h2 className="ms-3">Published Courses ({courses.length})</h2>
+      <div className="ms-4 mt-4">
+        <h5>Course</h5>
+        <input
+          value={course.name}
+          className="form-control"
+          onChange={(e) => setCourse({ ...course, name: e.target.value })}
+        />
+        <input
+          value={course.number}
+          className="form-control"
+          onChange={(e) => setCourse({ ...course, number: e.target.value })}
+        />
+        <input
+          value={course.startDate}
+          className="form-control"
+          type="date"
+          onChange={(e) => setCourse({ ...course, startDate: e.target.value })}
+        />
+        <input
+          value={course.endDate}
+          className="form-control"
+          type="date"
+          onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
+        />
+        <button className="btn btn-success me-2 mt-2" onClick={addCourse}>
+          Add
         </button>
-        <div className="split-dashboard-container">
-          <div className="d-flex row flex-row flex-wrap card-container">
-            {courses.map((course, index) => (
-              <div id={course.id} className="col-2 card">
-                <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="card-link">
-                  <div className="card-image" style={{ "background-color": course.background }}>
-                    <FaEllipsisV className="icon fa-ellipsis-v" />
-                  </div>
-                  <div className="card-details">
-                    <h5 className="card-custom-title text-nowrap">
-                      {course.number} {course.name}
-                    </h5>
-                    <div className="card-text card-custom-text">
-                      {course.startDate}
-                      <div className="text-nowrap">
-                        {course.endDate} 2022 Semester Full Term Grad
-                      </div>
-                    </div>
-                    <div className="course-card-actions mt-3">
-                      <button type="button" className="btn btn-secondary custom-btn"
-                        onClick={(event) => {
-                          event.preventDefault();
-                          setCourse(course);
-                          setShowForm(true);
-                        }}>
-                        Edit
-                      </button>
-                      <button type="button" className="btn btn-danger custom-btn"
-                        onClick={(event) => {
-                          event.preventDefault();
-                          deleteCourse(course._id);
-                        }}>
-                        Delete
-                      </button>
-                    </div>
-                  </div>
-                </Link>
+        <button className="btn btn-primary mt-2" onClick={updateCourse}>
+          Update
+        </button>
+      </div>
+
+      <div className="d-flex flex-row flex-wrap row row-cols-1 row-cols-md-3 g-4 mt-2">
+        {courses.map((course, index) => (
+          <div
+            key={index}
+            className="col ms-4 mt-4 mb-4"
+            style={{ width: "260px" }}
+          >
+            <div className="card h-100">
+              <div style={{ backgroundColor: "#3eafbb", height: "150px" }}>
+                <FaEllipsisVertical className=" text-white float-end mt-4 me-3" />
               </div>
-            ))}
-          </div>
-          {showForm && <div className="course-form">
-            <h3>Course Form</h3>
-            <input value={course.name} className="form-control mb-3"
-              onChange={(e) => setCourse({ ...course, name: e.target.value })} />
-            <input value={course.number} className="form-control mb-3"
-              onChange={(e) => setCourse({ ...course, number: e.target.value })} />
-            <input value={course.startDate} className="form-control mb-3" type="date"
-              onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
-            <input value={course.endDate} className="form-control mb-3" type="date"
-              onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
-            <div className="course-card-actions mt-3">
-              <button type="button" className="btn btn-secondary custom-btn"
-                onClick={() => {
-                  addCourse();
-                }}>
-                Add Course
-              </button>
-              <button type="button" className="btn btn-secondary custom-btn"
-                onClick={() => {
-                  updateCourse();
-                }}>
-                Update Course
-              </button>
+              <div className="card-body">
+                <Link to={`/Kanbas/Courses/${course._id}`}>
+                  <h5
+                    className="card-title text-truncate text-decoration-none d-inline-block text-dark"
+                    style={{
+                      width: "200px",
+                      overflow: "hidden",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {course.name}
+                  </h5>
+                </Link>
+                <p className="card-text">
+                  {course.number}
+                  <br />
+                  <small>
+                    {course.startDate.replace(/-/, "")} Semester Full Term
+                  </small>
+                </p>
+                <FaRegPenToSquare
+                  className="ms-1"
+                  style={{ fontSize: "22px" }}
+                />
+                <button
+                  className="btn btn-danger float-end "
+                  onClick={(event) => {
+                    event.preventDefault();
+                    deleteCourse(course._id);
+                  }}
+                >
+                  Delete
+                </button>
+                <button
+                  className="btn btn-warning float-end mb-1 me-2"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setCourse(course);
+                  }}
+                >
+                  Edit
+                </button>
+              </div>
             </div>
-          </div>}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

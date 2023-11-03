@@ -4,6 +4,7 @@ import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { React, useState } from "react";
 import db from "./Database";
+import store from "./store";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import { Provider } from "react-redux";
@@ -42,14 +43,14 @@ function Kanbas() {
         setShowForm(false);
     };
     return (
-        // <Provider store={store}>
+        <Provider store={store}>
             <div className="row outer-container">
                 <KanbasNavigation />
                 <div className="col second-container">
                     <Routes>
                         <Route path="/" element={<Navigate to="Dashboard" />} />
                         <Route path="Courses" element={<Navigate to="RS101/Home" />} />
-                        {/* <Route path="Account" element={<WIP />} /> */}
+                        <Route path="Account" element={<h1>Account</h1>} />
                         <Route path="Dashboard" element={
                             <Dashboard
                                 courses={courses}
@@ -63,16 +64,17 @@ function Kanbas() {
                             />} />
                         <Route path="Courses/:courseId/*" element={
                             <Courses courses={courses} />} />
-                        {/* <Route path="Calendar" element={<WIP />} />
-                        <Route path="Inbox" element={<WIP />} />
-                        <Route path="History" element={<WIP />} />
-                        <Route path="Studio" element={<WIP />} />
-                        <Route path="Commons" element={<WIP />} />
-                        <Route path="Help" element={<WIP />} /> */}
+                            <Route path="Calendar" element={<h1>Calendar</h1>} />
+                            <Route path="Inbox" element={<h1>Inbox</h1>} />
+                            <Route path="History" element={<h1>History</h1>} />
+                            <Route path="Studio" element={<h1>Studio</h1>} />
+                            <Route path="Commons" element={<h1>Commons</h1>} />
+                            <Route path="Help" element={<h1>Help</h1>} />
+                      
                     </Routes>
                 </div>
             </div>
-        // </Provider>
+        </Provider>
     );
     // return(
    
