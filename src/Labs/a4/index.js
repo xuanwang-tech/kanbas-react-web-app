@@ -22,22 +22,23 @@ const Assignment4 = () => {
  return(
    <>
      <h1>Assignment 4</h1>
+     <ReduxExamples/><br/>
 
      <Add a={1} b={2} />
      <ClickEvent /><br/>
-     <PassingDataOnEvent />
-     <PassingFunctions theFunction={sayHello}/>
-     <EventObject/>
-     <Counter/>
-     <BooleanStateVariables/>
-     <StringStateVariables/>
-     <DateStateVariable/>
-     <ObjectStateVariable/>
-     <ArrayStateVariable/>
-     <ParentStateComponent/>
-     <ChildStateComponent/>
+     <PassingDataOnEvent /><br/>
+     <PassingFunctions theFunction={sayHello}/><br/>
+     <EventObject/><br/>
+     <Counter/><br/>
+     <BooleanStateVariables/><br/>
+     <StringStateVariables/><br/>
+     <DateStateVariable/><br/>
+     <ObjectStateVariable/><br/>
+     <ArrayStateVariable/><br/>
+     <ParentStateComponent/><br/>
+     <ChildStateComponent/><br/>
      
-     <ReduxExamples/>
+     
    </>
  );
 };

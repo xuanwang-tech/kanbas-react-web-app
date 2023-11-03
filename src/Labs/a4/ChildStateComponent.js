@@ -2,10 +2,10 @@ function ChildStateComponent({ counter, setCounter }) {
     return (
       <div>
         <h3>Counter {counter}</h3>
-        <button onClick={() => setCounter(counter + 1)}>
-          Increment</button>
-        <button onClick={() => setCounter(counter - 1)}>
-          Decrement</button>
+        <button className="btn btn-success me-2" onClick={() => setCounter(counter + 1)}>
+        Increment</button>
+        <button className="btn btn-danger me-2" onClick={() => setCounter(counter - 1)}>
+        Decrement</button>
       </div>
     );
   }

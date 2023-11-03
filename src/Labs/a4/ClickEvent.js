@@ -8,18 +8,17 @@ function ClickEvent() {
     return (
       <div>
         <h2>Click Event</h2>
-        <button onClick={hello}>
-          Click Hello 1 </button>
-        <button onClick={() => hello()}>
-          Click Hello 2 </button>
-        <button
-          onClick={() => {
-            hello();
-            good();
-          }}
-        >
-          Click Hello 3
-        </button>
+       
+        <button className="btn btn-primary me-1" onClick={hello}>Click Hello 1 </button>
+        <button className="btn btn-primary me-1" onClick={() => hello()}>Click Hello 2 </button>
+        <button className="btn btn-primary me-1"
+        onClick={() => {
+          hello();
+          good();
+        }}
+      >
+        Click Hello 3
+      </button>
       </div>
     );
   }
