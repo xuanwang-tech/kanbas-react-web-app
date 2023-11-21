@@ -12,8 +12,20 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import { FaBars, FaGlasses } from "react-icons/fa";
 
-function Courses({courses}) {
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+
+function Courses({}) {
     const { courseId } = useParams();
+    const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
     // const course = db.courses.find((course) => course._id === courseId);
     // return (
     //     // 
@@ -47,7 +59,12 @@ function Courses({courses}) {
     // );
     const { pathname } = useLocation();
     const [empty, kanbas, id, screen] = pathname.split("/");
-    const course = courses.find((course) => course._id === courseId);
+    // const course = courses.find((course) => course._id === courseId);
+
+    useEffect(() => {
+      findCourseById(courseId);
+    }, [courseId]);
+  
   return (
     <div className="main-container">
       <div className="courses-header-section">

@@ -1,17 +1,27 @@
 // import {Link} from "react-router-dom";
-
+import React, { useState, useEffect } from "react";
 import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { React, useState } from "react";
+
 import db from "./Database";
 import store from "./store";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import { Provider } from "react-redux";
+import axios from "axios";
 // import CourseNavigation from "./CourseNavigation";
 
 function Kanbas() {
-  const [courses, setCourses] = useState(db.courses);
+  const [courses, setCourses] = useState([]);
+  const URL = "http://localhost:4000/api/courses";
+  const findAllCourses = async () => {
+    const response = await axios.get(URL);
+    setCourses(response.data);
+  };
+  useEffect(() => {
+    findAllCourses();
+  }, []);
+
     const [showForm, setShowForm] = useState(false);
     const [course, setCourse] = useState({
         name: "New Course",
@@ -21,20 +31,29 @@ function Kanbas() {
         background: "rgb(96, 228, 228)"
     })
 
-    const addCourse = () => {
-        setCourses([...courses, { ...course, _id: new Date().getTime() + "" }])
-        setShowForm(false);
+    const addCourse = async() => {
+        const response = await axios.post(URL, course);
+        setCourses([response.data, ...courses]);
+        setCourse({ name: "", number: "", startDate: "", endDate: "" });
     }
 
-    const deleteCourse = (courseId) => {
-        setCourses(courses.filter((course) => course._id !== courseId));
+    const deleteCourse = async(courseId) => {
+        const response = await axios.delete( `${URL}/${course._id}`);
+      setCourses(courses.filter(
+        (c) => c._id !== course._id));
+  
     }
 
-    const updateCourse = () => {
+    const updateCourse = async() => {
+        const response = await axios.put(
+            `${URL}/${course._id}`,
+            course
+          );
+      
         setCourses(
             courses.map((c) => {
                 if (c._id === course._id) {
-                    return course;
+                    return response.data;
                 } else {
                     return c;
                 }
