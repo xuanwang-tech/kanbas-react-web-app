@@ -5,29 +5,29 @@ import axios from "axios";
 function EncodingParametersInURLs() {
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
+  const API_BASE = "http://localhost:4000/a5";
+
   const [welcome, setWelcome] = useState("");
   const fetchWelcome = async () => {
     const response = await axios.get("http://localhost:4000/a5/welcome");
     setWelcome(response.data);
   };
-  useEffect(() => {
-    fetchWelcome();
-  }, []);
+  
   const [result, setResult] = useState(0);
   const fetchSum = async (a, b) => {
     const response = await
-      axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+      axios.get(`${API_BASE}/add/${a}/${b}`);
     setResult(response.data);
   };
   const fetchSubtraction = async (a, b) => {
     const response = await axios.get(
-      `http://localhost:4000/a5/subtract/${a}/${b}`);
+      `${API_BASE}/subtract/${a}/${b}`);
     setResult(response.data);
   };
 
-  useEffect(() => {  }, []);
-
-
+  useEffect(() => {
+    fetchWelcome();
+  }, []);
 
   return (
     <div>

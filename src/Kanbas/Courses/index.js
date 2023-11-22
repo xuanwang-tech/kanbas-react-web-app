@@ -1,125 +1,128 @@
-import db from "../Database";
-import { Navigate, Route, Routes, useParams, useLocation  } from "react-router-dom";
-import CourseNavigation from "./CourseNavigation";
+// import { Navigate, Route, Routes, useParams, useLocation  } from "react-router-dom";
+// import CourseNavigation from "./CourseNavigation";
+// import React from "react";
+// import '../../index.css';
+// import "./index.css";
+// import CourseNav from "./CourseNav";
+// import Modules from "./Modules";
+// import Home from "./Home";
+// import Assignments from "./Assignments";
+// import AssignmentEditor from "./Assignments/AssignmentEditor";
+// import Grades from "./Grades";
+// import { FaBars, FaGlasses } from "react-icons/fa";
+
+// import { useState, useEffect } from "react";
+// import axios from "axios";
+
+
+// function Courses({}) {
+//     const { courseId } = useParams();
+//     const URL = "http://localhost:4000/api/courses";
+//     const [course, setCourse] = useState({});
+//   const findCourseById = async (courseId) => {
+//     const response = await axios.get(
+//       `${URL}/${courseId}`
+//     );
+//     setCourse(response.data);
+//   };
+
+//     const { pathname } = useLocation();
+//     const [empty, kanbas, id, screen] = pathname.split("/");
+    
+
+//     useEffect(() => {
+//       findCourseById(courseId);
+//     }, [courseId]);
+  
+  
+//   return (
+//     <div>
+//       <h1>
+//         Courses {course.name} / {screen}
+//       </h1>
+//       <CourseNavigation />
+//       <div>
+//         <div
+//           className="overflow-y-scroll position-fixed bottom-0 end-0"
+//           style={{
+//             left: "320px",
+//             top: "50px",
+//           }}
+//         >
+//           <Routes>
+//             <Route path="/" element={<Navigate to="Home" />} />
+//             <Route path="Home" element={<Home />} />
+//             <Route path="Modules" element={<Modules />} />
+//             <Route path="Assignments" element={<Assignments />} />
+//             <Route
+//               path="Assignments/:assignmentId"
+//               element={<AssignmentEditor />}
+//             />
+//             <Route path="Grades" element={<Grades />} />
+//           </Routes>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+// export default Courses;
 import React from "react";
-import '../../index.css';
-import "./index.css";
-import CourseNav from "./CourseNav";
+import { Routes, Route, Navigate, useParams } from "react-router-dom";
+import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
-import { FaBars, FaGlasses } from "react-icons/fa";
-
+import CourseName from "./CourseName";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+function Courses() {
+  const { courseId } = useParams();
+  const [course, setCourse] = useState({});
+  //"http://localhost:4000/api"
+  const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000/api" ;
+  const URL = `${API_BASE}/courses`;
 
-function Courses({}) {
-    const { courseId } = useParams();
-    const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
     const response = await axios.get(
       `${URL}/${courseId}`
     );
     setCourse(response.data);
   };
-
-    // const course = db.courses.find((course) => course._id === courseId);
-    // return (
-    //     // 
-    //     <div>
-    //         <CourseNav />
-    //         <hr className="mb-3" />
-    //         <div>
-    //             <CourseNavigation />
-    //             <div
-    //                 className="overflow-y-scroll position-fixed bottom-0 end-0"
-    //                 style={{
-    //                     left: "320px",
-    //                     top: "70px",
-    //                 }}
-    //             >
-    //                 <Routes>
-    //                     <Route path="/" element={<Navigate to="Home" />} />
-    //                     <Route path="Home" element={<Home/>} />
-    //                     <Route path="Modules" element={<Modules/>} />
-    //                     <Route path="Assignments" element={<Assignments />} />
-    //                     <Route
-    //                         path="Assignments/:assignmentId"
-    //                         element={<AssignmentEditor/>}
-    //                     />
-    //                     <Route path="Grades" element={<Grades />} />
-    //                 </Routes>
-    //             </div>
-    //         </div>
-
-    //     </div>
-    // );
-    const { pathname } = useLocation();
-    const [empty, kanbas, id, screen] = pathname.split("/");
-    // const course = courses.find((course) => course._id === courseId);
-
-    useEffect(() => {
-      findCourseById(courseId);
-    }, [courseId]);
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
   
   return (
-    <div className="main-container">
-      <div className="courses-header-section">
-        <div style={{ "display": "flex" }}>
-          <FaBars className="course-menu-icon" />
-          <nav style={{ "--bs-breadcrumb-divider": "'>'" }} aria-label="breadcrumb">
-            <ol style={{ marginBottom: "0" }} className="breadcrumb">
-              <li className="breadcrumb-item breadcrumb-item-color">
-                {course.name}
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">
-                {screen}
-              </li>
-            </ol>
-          </nav>
+    <div style={{ position: "relative" }}>
+      <CourseName />
+      <hr style={{ width: "86vw" }} />
+      <div style={{ position: "relative", display: "flex" }}>
+        <CourseNavigation />
+        <div
+          className="overflow-y-scroll position-absolute bottom-0 end-0"
+          style={{
+            left: "170px",
+            top: "10px",
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Navigate to="Home" />} />
+            <Route path="Home" element={<Home />} />
+            <Route path="Modules" element={<Modules />} />
+            <Route path="Assignments" element={<Assignments />} />
+            <Route
+              path="Assignments/:assignmentId"
+              element={<AssignmentEditor />}
+            />
+            <Route path="Grades" element={<Grades />} />
+          </Routes>
         </div>
-        <div>
-          <button type="button" className="btn btn-secondary student-view ms-2">
-            <FaGlasses className="me-2" />Student View
-          </button>
-        </div>
-      </div>
-      <hr className="no-margin" />
-      <CourseNavigation />
-      <div className="overflow-y-scroll position-fixed bottom-0 end-0 course-container" style={{
-        left: "320px",
-        top: "90px",
-      }}
-      >
-        <Routes>
-          <Route path="/" element={<Navigate to="Home" />} />
-          <Route path="Home" element={<Home />} />
-          <Route path="Modules" element={<Modules />} />
-          <Route path="Assignments" element={<Assignments />} />
-          <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
-          <Route path="Grades" element={<Grades />} />
-          {/* <Route path="Quizzes" element={<WIP />} />
-          <Route path="Piazza" element={<WIP />} />
-          <Route path="People" element={<WIP />} />
-          <Route path="Panopto Video" element={<WIP />} />
-          <Route path="Zoom Meetings" element={<WIP />} />
-          <Route path="Announcements" element={<WIP />} />
-          <Route path="Discussions" element={<WIP />} />
-          <Route path="Pages" element={<WIP />} />
-          <Route path="Files" element={<WIP />} />
-          <Route path="Rubrics" element={<WIP />} />
-          <Route path="Outcomes" element={<WIP />} />
-          <Route path="Collaborations" element={<WIP />} />
-          <Route path="Syllabus" element={<WIP />} />
-          <Route path="Settings" element={<WIP />} />
-          <Route path="Progress Reports[EAB Navigate]" element={<WIP />} /> */}
-        </Routes>
       </div>
     </div>
   );
 }
-export default Courses;
 
+export default Courses;

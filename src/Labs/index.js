@@ -11,12 +11,7 @@ function Labs() {
     return (
       <Provider store={store}>
         <div className="container">
-          {/* <Link to="/hello">Hello</Link> |
-          <Link to="/Labs/a3">A3</Link> |
-          <Link to="/Kanbas">Kanbas</Link> */}
-          <Nav/>
-
-          {/* <Assignment3/> */}
+         
           <Routes>
             <Route path="/"
               element={<Navigate
