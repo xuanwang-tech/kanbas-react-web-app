@@ -1,39 +1,40 @@
+.wd-kanbas-navigation .wd-icon {
+  font-size: 2em;
+}
+
+.wd-kanbas-navigation .list-group-item:first-child,
+.wd-kanbas-navigation .list-group-item:last-child,
+.wd-kanbas-navigation .list-group-item.active:last-child,
+.wd-kanbas-navigation.list-group {
+  border-radius: 0px;
+}
 
 .wd-kanbas-navigation {
-    border-radius: 0 !important;
-    background: black;
-    width: 85px !important;
-    min-height: max(100vh, 100%);
+  background-color: black;
+  list-style: none;
+  padding: 0px;
+  width: 80px;
+  margin: 0px;
 }
 
-
-.wd-kanbas-navigation .list-group-item {
-    background: black;
-    padding: 10px;
-    margin-block: 5px;
-    border: 0;
-    max-width: 100% !important;
-    font-size: 0.9em !important;
-    align-items: center;
-    color: white;
+.wd-kanbas-navigation a {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  text-align: center;
+  background-color: black;
+  border: none;
+  
 }
 
-
-.wd-kanbas-navigation .list-group-item.active {
-    margin-top: 5px !important;
-    background: white;
-    color: red;
+.wd-kanbas-navigation a.active {
+  background-color: white;
+}
+.wd-kanbas-navigation a.active {
+  color: red;
 }
 
-
-.wd-kanbas-navigation .neu {
-    padding: 0px;
-    margin: 0px;
-    width: 85px;
-    height: 85px;
-}
-
-.wd-kanbas-navigation .wd-icon {
-    font-size: 2em;
-    color: red;
+.wd-kanbas-navigation a {
+  color: white;
+  text-decoration: none;
 }

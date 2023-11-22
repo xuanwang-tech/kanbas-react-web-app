@@ -20,7 +20,7 @@ function AssignmentButton() {
   };
   
   const handleAddAssignment = () => {
-    client.addAssignment(courseId, initialState).then((assignment) => {
+    client.createAssignment(courseId, initialState).then((assignment) => {
       dispatch(addAssignment(assignment));
       navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
     });
