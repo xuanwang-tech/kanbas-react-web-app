@@ -36,12 +36,10 @@ function KanbasNavigation() {
       className="list-group wd-kanbas-navigation"
       style={{ width: 150 }}
     >
-      <div
-        className="text-danger text-center my-2"
-        style={{ fontSize: "50px" }}
-      >
-        N
-      </div>
+      <Link key={9} to='/Kanbas/Dashboard' className='list-group-item d-flex flex-column neu'>
+                    <img className="img-fluid" src={require("./neulogo.jpg")} alt="NU Logo" />
+                </Link>
+     
       {links.map((link, index) => (
         <Link
           key={index}
