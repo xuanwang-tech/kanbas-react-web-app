@@ -5,23 +5,23 @@ import axios from "axios";
 function EncodingParametersInURLs() {
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
-  const API_BASE = "http://localhost:4000/a5";
+  const REACT_APP_LAB = "https://kanbas-node-server-app-6khl.onrender.com/a5";
 
   const [welcome, setWelcome] = useState("");
   const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
+    const response = await axios.get("https://kanbas-node-server-app-6khl.onrender.com/a5/welcome");
     setWelcome(response.data);
   };
   
   const [result, setResult] = useState(0);
   const fetchSum = async (a, b) => {
     const response = await
-      axios.get(`${API_BASE}/add/${a}/${b}`);
+      axios.get(`${REACT_APP_LAB}/add/${a}/${b}`);
     setResult(response.data);
   };
   const fetchSubtraction = async (a, b) => {
     const response = await axios.get(
-      `${API_BASE}/subtract/${a}/${b}`);
+      `${REACT_APP_LAB}/subtract/${a}/${b}`);
     setResult(response.data);
   };
 
@@ -61,23 +61,23 @@ function EncodingParametersInURLs() {
 
       <h3>Path Parameters</h3>
       <a
-        href={`http://localhost:4000/a5/add/${a}/${b}`}
+        href={`https://kanbas-node-server-app-6khl.onrender.com/a5/add/${a}/${b}`}
         className="btn btn-primary">
         Add {a} + {b}
       </a>
       <a
-        href={`http://localhost:4000/a5/subtract/${a}/${b}`}
+        href={`https://kanbas-node-server-app-6khl.onrender.com/a5/subtract/${a}/${b}`}
         className="btn btn-danger">
         Substract {a} - {b}
       </a>
       <h3>Query Parameters</h3>
         <a
-        href={`http://localhost:4000/a5/calculator?operation=add&a=${a}&b=${b}`}
+        href={`https://kanbas-node-server-app-6khl.onrender.com/a5/calculator?operation=add&a=${a}&b=${b}`}
         className="btn btn-primary">
         Add {a} + {b}
         </a>
         <a
-        href={`http://localhost:4000/a5/calculator?operation=subtract&a=${a}&b=${b}`}
+        href={`https://kanbas-node-server-app-6khl.onrender.com/a5/calculator?operation=subtract&a=${a}&b=${b}`}
         className="btn btn-danger">
         Substract {a} - {b}
         </a>

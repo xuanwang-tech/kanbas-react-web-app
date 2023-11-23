@@ -4,8 +4,8 @@ import axios from "axios";
 function WorkingWithArrays() {
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const API_BASE = "http://localhost:4000";
-  const API = `${API_BASE}/a5/todos`;
+  const REACT_APP_LAB = "https://kanbas-node-server-app-6khl.onrender.com";
+  const API = `${REACT_APP_LAB}/a5/todos`;
   const [todo, setTodo] = useState({
     id: 1,
     title: "NodeJS Assignment",
