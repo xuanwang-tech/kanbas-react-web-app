@@ -151,7 +151,7 @@ function Account() {
     };
     const signout = async () => {
         await client.signout();
-        navigate("/kanbas/signin");
+        navigate("/project/signin");
     };
 
     useEffect(() => {
