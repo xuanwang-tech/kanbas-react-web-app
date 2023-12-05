@@ -6,11 +6,14 @@ import Kanbas from "./Kanbas";
 import {HashRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
 import Project from "./Project";
-
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { Provider } from "react-redux";
+import store from "./Labs/store";
 function App() {
 
   return (
     <HashRouter>
+      <Provider store={store}>
         <div>
         <Routes>
           <Route path="/"         element={<Navigate to="/Labs"/>}/>
@@ -21,8 +24,10 @@ function App() {
         </Routes>
 
         </div>
+        </Provider>
+
     </HashRouter>
-   );
+  );
 }
 
 export default App;
