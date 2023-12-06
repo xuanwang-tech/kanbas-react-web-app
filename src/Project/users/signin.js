@@ -17,6 +17,10 @@ function Signin() {
       setError(err.response.data.message);
     }
   };
+//   const signin = async () => {
+//     await client.signin(credentials);
+//     navigate("/project/account");
+// };
   return (
     <div>
       <h1>Signin</h1>
